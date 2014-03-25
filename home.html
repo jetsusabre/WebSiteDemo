@@ -8,17 +8,44 @@
 		<meta name="keywords" content="demo website, angularjs, css, html5" />
 		<meta name="author" content="PhilGrant" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css">
+		<link rel="stylesheet" type="text/css" href="css/style8.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<script src="js/angular.min.js"></script>	
-		<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div class="container">
 			<div class="topLine"></div>
-			<div class=""></div>
-			<label>Name:</label>
-			<input type="text" ng-model="yourName" placeholder="Enter a name here">
-			<hr>
-			<h1>Hello {{yourName}}!</h1>
+			<header class="codrops-header">
+				<h1>Fullscreen Overlay Styles &amp; Effects</h1>	
+				<nav class="codrops-demos">
+					<a class="current-demo" href="#">Content Scale</a>
+				</nav>
+			</header>			
+			<section>
+				<p>The page scales down and the overlay slide in from the bottom.</p>
+				<p><button id="trigger-overlay" type="button">Open Overlay</button></p>
+			</section>
+			<section>
+				<label>Name:</label>
+				<input type="text" ng-model="yourName" placeholder="Enter a name here">
+				<hr>
+				<h1>Hello {{yourName}}!</h1>
+			</section>
+		</div><!-- Container -->
+		<div class="overlay overlay-contentscale">
+			<button type="button" class="overlay-close">Close</button>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Work</a></li>
+					<li><a href="#">Clients</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
+		<script src="js/classie.js"></script>
+		<script src="js/demo7.js"></script>		
 	</body>
 </html>
