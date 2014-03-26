@@ -8,17 +8,20 @@
 		<meta name="keywords" content="demo website, angularjs, css, html5" />
 		<meta name="author" content="PhilGrant" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css">
-		<link rel="stylesheet" type="text/css" href="css/style8.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 		<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>		
 		<script src="js/angular.min.js"></script>	
 		<script src="js/modernizr.custom.js"></script>
 		<script src="js/search.js"></script>
+		<script src="js/angularStuff.js"></script>
 	</head>
 	<body style="background: #003366">
 		<div class="container">
-			<div class="topLine"></div>
+			<div class="topLine">
+				<div ng-app ng-controller="Ctrl">{{dt | date:'MM-dd-yyyy'}}</div>
+			</div>
 			<header class="codrops-header">
 				<h1>Phil's Favorite Teams</h1>	
 				<!-- <nav class="codrops-demos">

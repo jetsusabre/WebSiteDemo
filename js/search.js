@@ -1,6 +1,7 @@
 // Example JSONP request with jQuery
 var url = window.location.href;
 var host = window.location.host;
+// Determine which api extension to use based on the current url
 if(url.indexOf('http://' + host + '/home') != -1) {
     var apiExtension = "basketball/mens-college-basketball/teams/183/news";
 }
@@ -24,6 +25,7 @@ $.ajax({
         // create an unordered list of results
         var ul = $('<ul/>');
         $.each(data.headlines, function() {  
+            // create links for results
             var link = $('<a/>', {
                 'href': this.links.web.href,
                 'target': '_blank'
@@ -34,7 +36,8 @@ $.ajax({
         // append this list to the document body
         $('#response').append(ul);
     },
-    error: function() {
-         // console.log("Error with API");
+    error: function(xhr, ajaxOptions, thrownError) {
+        alert(xhr.statusText);
+        alert(thrownError);
     }
 });

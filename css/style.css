@@ -5,7 +5,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(153,204,51,0.9);
+	background: #000;
 }
 
 /* Overlay closing cross */
@@ -115,6 +115,7 @@ body {
 		min-height: 34px;
 	}
 }
+/* End of Effects */
 
 .footer {
     position: fixed;
@@ -133,4 +134,10 @@ li {
 
 #response h2{
 	margin-left: 3%;
+}
+
+.topLine {
+	height: 20px;
+	background: #000;
+	color: #FFF;
 }
