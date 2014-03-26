@@ -23,9 +23,13 @@ $.ajax({
     success: function(data) {
         // create an unordered list of results
         var ul = $('<ul/>');
-        $.each(data.headlines, function() {            
-            var li = $('<li/>').text(this.headline);
-            ul.append(li)
+        $.each(data.headlines, function() {  
+            var link = $('<a/>', {
+                'href': this.links.web.href,
+                'target': '_blank'
+            }).append(this.headline);
+            var h5 = $("<h5/>").append(link);          
+            ul.append(h5)
         });
         // append this list to the document body
         $('#response').append(ul);
